@@ -90,7 +90,5 @@
     "vue-jest": "^4.0.1",
     "vue-server-renderer": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
-
-
   }
 }

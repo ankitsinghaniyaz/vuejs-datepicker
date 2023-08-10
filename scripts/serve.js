@@ -2,10 +2,10 @@ import path from 'path'
 import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
 import vue from 'rollup-plugin-vue'
-import babel from 'rollup-plugin-babel'
+import { babel } from '@rollup/plugin-babel';
 import resolve from 'rollup-plugin-node-resolve'
-import replace from 'rollup-plugin-replace'
-import common from 'rollup-plugin-commonjs'
+import replace from '@rollup/plugin-replace'
+import commonjs from '@rollup/plugin-commonjs';
 
 export default {
   input: path.join(__dirname, '..', 'example', 'main.js'),
@@ -25,7 +25,7 @@ export default {
     resolve({
       mainFields: ['module', 'main']
     }),
-    common(),
+    commonjs(),
     babel({exclude: 'node_modules/**'}),
     serve({
       open: true,
